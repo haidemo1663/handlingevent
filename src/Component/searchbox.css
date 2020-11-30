@@ -35,3 +35,6 @@ form{
 button.btn-hidden{
     visibility: hidden;
 }
+input.newBorderColor{
+    border-color:#F00 ;
+}

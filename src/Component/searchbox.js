@@ -6,12 +6,13 @@ class Searchbox extends Component{
   constructor(props){
     super(props);
     this.state = {
-      isFocused: false
+      isFocused: false,
+      content:""
     };
   }
   changeInputValue(e) {
     this.setState({
-      "isFocused": true
+     [e.target.name]:[e.target.value]
     });
 
   }
@@ -43,11 +44,13 @@ class Searchbox extends Component{
               <form
                     onSubmit={e => {
                         this.submitForm(e);}}>
-            <input
+            <input className={classNames({"newBorderColor":this.state.content.length>10})}
               type="text"
-              name="isFocus"
+              name="searchbox"
               placeholder="Enter Somethings..."
-              onFocus={(e) => this.changeInputValue(e)}
+              onFocus={(e) =>this.setState({"isFocused":true})}
+              onBlur={()=>this.setState({"isFocused":false})}
+              onChange={(e)=>this.setState({"content": e.target.value})}
             />
           <span>
           <button type="submit" className={classNames({"btn-hidden":this.state.isFocused===true})}>
