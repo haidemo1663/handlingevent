@@ -30,21 +30,21 @@ class Searchbox extends Component{
       //   alert('Submit form success')
       // }
     }
-    // validationForm() {
-    //   let returnData = {
-    //     error : false,
-    //     msg: ''
-    //   }
-    //   const {search} = this.state
-    //   return returnData;
-    // }
+    validationForm() {
+      const re = /"090"+\S/;
+      //Kiểm tra email
+      if (re.test(this.state.content)) return false;
+      if(this.state.content.length !==10) return false;
+      return true;
+    }
+  
     render(){
         return (
             <div className="searchbox">
               <form
                     onSubmit={e => {
                         this.submitForm(e);}}>
-            <input className={classNames({"newBorderColor":this.state.content.length>10})}
+            <input className={classNames({"newBorderColor":!this.validationForm()})}
               type="text"
               name="searchbox"
               placeholder="Enter Somethings..."
