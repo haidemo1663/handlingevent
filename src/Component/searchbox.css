@@ -1,4 +1,4 @@
-button{
+button.search{
     width: 40px;
     height: 40px;
     position: absolute;
@@ -12,7 +12,7 @@ button{
 
     
 }
-button img{
+button.search img{
     width: 100%;
 }
 input{
@@ -32,7 +32,7 @@ form{
     align-items: center;
 
 }
-button.btn-hidden{
+button.search.btn-hidden{
     visibility: hidden;
 }
 input.newBorderColor{

@@ -53,7 +53,7 @@ class Searchbox extends Component{
               onChange={(e)=>this.setState({"content": e.target.value})}
             />
           <span>
-          <button type="submit" className={classNames({"btn-hidden":this.state.isFocused===true})}>
+          <button type="submit" className={classNames("search",{"btn-hidden":this.state.isFocused===true})}>
             <img src={logo} alt="s" className="searchbtn"/>
           </button>
           </span>

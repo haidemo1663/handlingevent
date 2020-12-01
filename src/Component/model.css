@@ -1,0 +1,70 @@
+.open-btn{
+    width: 120px;
+    height: 50px;
+    margin: -70px 0;
+    background: #28A745;
+    color: #fff;
+    border: none;
+    position: absolute;
+    right: 750px;
+  }
+.block-content{
+    width: 750px;
+    height: auto;
+    padding:40px 50px;
+    position: relative;
+    left: 500px;
+    margin: 50px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid #888;
+    visibility: visible;
+}
+.block-content.hidden{
+    visibility: hidden;
+}
+.block-content p{
+    font-size: 16px;
+}
+.block-content p.head-block-content{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: start;
+    margin: 10px 5px;
+}
+.btn{
+    outline: none;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+}
+.btn.exit{
+    position: absolute;
+    border: none;
+    right: 20px;
+    top: 5px;
+    background-color:transparent;
+    font-size: 28px;
+}
+.btn-control{
+    position: relative;
+    left:300px;
+    bottom: -10px;
+}
+.btn-control .btn{
+    width: 120px;
+    height: 50px;
+    margin: 0 20px;
+}
+.btn.accept{
+    background: #28A745;
+    color: #fff;
+
+}
+.btn.decline{
+    background: #D63447;
+    color: #fff;
+
+}
